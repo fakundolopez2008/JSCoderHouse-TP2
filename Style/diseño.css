@@ -1,0 +1,242 @@
+/* Variables de color */
+:root {
+  --verde-oscuro: #5A827E;
+  --verde-medio: #84AE92;
+  --verde-claro: #B9D4AA;
+  --crema-suave: #FAFFCA;
+  --negro-suave: #333;
+  --blanco: #fff;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--crema-suave);
+  color: var(--negro-suave);
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+#logo-tienda {
+  font-size: 1.8rem;
+}
+
+.navegacion-principal .lista-navegacion {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link-navegacion {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-navegacion:hover {
+  text-decoration: underline;
+}
+
+.carrito {
+  font-size: 1.2rem;
+}
+
+/* HERO */
+.hero {
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.titulo-hero {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.descripcion-hero {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.boton-hero {
+  background-color: var(--verde-claro);
+  color: var(--negro-suave);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px var(--sombra);
+  transition: background-color 0.3s ease;
+}
+
+.boton-hero:hover {
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+}
+
+/* PRODUCTOS */
+.seccion-productos {
+  padding: 2rem;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--verde-oscuro);
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-producto {
+  background-color: var(--verde-claro);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--sombra);
+  text-align: center;
+}
+
+.imagen-producto {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.nombre-producto {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.precio-producto {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.boton-agregar {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-agregar:hover {
+  background-color: var(--negro-suave);
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-info,
+.footer-contacto {
+  flex: 1 1 300px;
+  margin-bottom: 1rem;
+}
+
+.footer-titulo {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* ANIMACIONES GLOBALES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInTop {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header con animación de entrada */
+.header {
+  animation: slideInTop 0.6s ease-out;
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+}
+
+/* Hero con entrada suave */
+.hero {
+  animation: fadeIn 1s ease-in;
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Botones con transiciones */
+.boton-hero,
+.boton-agregar {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tarjetas animadas al aparecer */
+.tarjeta-producto {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+  background-color: var(--verde-claro);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--sombra);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px var(--sombra);
+}
+
+/* Enlaces con transición */
+.link-navegacion {
+  transition: color 0.2s ease;
+}
+
+.link-navegacion:hover {
+  color: var(--crema-suave);
+}
