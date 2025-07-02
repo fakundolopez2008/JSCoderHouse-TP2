@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="./Style/diseño.css" />
-  <script src="./JS/script.js"></script>
   <title>Tienda Online - ECommerce</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
+  
   <header id="encabezado" class="header">
     <div class="logo-container">
       <h1 id="logo-tienda">MiTienda</h1>
@@ -22,12 +21,13 @@
         <li><a href="#contacto" class="link-navegacion">Contacto</a></li>
       </ul>
     </nav>
-    <div id="carrito-icono" class="carrito">
-      🛒 <span class="contador-carrito" id="contador-carrito">0</span>
+    <div id="carrito-icono" class="carrito" style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+      <div>
+        🛒 <span class="contador-carrito" id="contador-carrito">0</span>
+      </div>
+      <button id="limpiarCarrito" class="boton-agregar" style="margin-top: 4px;">Limpiar carrito</button>
     </div>
   </header>
-
-  <!-- Banner o Hero -->
   <section id="seccion-hero" class="hero">
     <div class="contenedor-hero">
       <h2 class="titulo-hero">¡Bienvenido a MiTienda!</h2>
@@ -35,38 +35,36 @@
       <a href="#productos" class="boton-hero">Ver productos</a>
     </div>
   </section>
-
-  <!-- Lista de productos -->
   <main id="contenido-principal" class="contenido">
     <section id="productos" class="seccion-productos">
       <h2 class="titulo-seccion">Nuestros Productos</h2>
       <div class="grid-productos">
-        <!-- Producto individual -->
+    
         <article class="tarjeta-producto" id="producto-1">
-          <img src="img/producto1.jpg" alt="Producto 1" class="imagen-producto" />
-          <h3 class="nombre-producto">Producto 1</h3>
-          <p class="precio-producto">$1.000</p>
+          <img src="elements/ps5.jpg" alt="PlayStation 5" class="imagen-producto" />
+          <h3 class="nombre-producto">PlayStation 5</h3>
+          <p class="precio-producto">$945.000</p>
           <button class="boton-agregar" data-id="1">Agregar al carrito</button>
         </article>
-        <article class="tarjeta-producto" id="producto-1">
-          <img src="img/producto1.jpg" alt="Producto 1" class="imagen-producto" />
-          <h3 class="nombre-producto">Producto 1</h3>
-          <p class="precio-producto">$1.000</p>
-          <button class="boton-agregar" data-id="1">Agregar al carrito</button>
+        <article class="tarjeta-producto" id="producto-2">
+          <img src="elements/switch.jpg" alt="Nintendo Switch" class="imagen-producto" />
+          <h3 class="nombre-producto">Nintendo Switch</h3>
+          <p class="precio-producto">$660.000</p>
+          <button class="boton-agregar" data-id="2">Agregar al carrito</button>
         </article>
-        <article class="tarjeta-producto" id="producto-1">
-          <img src="img/producto1.jpg" alt="Producto 1" class="imagen-producto" />
-          <h3 class="nombre-producto">Producto 1</h3>
-          <p class="precio-producto">$1.000</p>
-          <button class="boton-agregar" data-id="1">Agregar al carrito</button>
+        <article class="tarjeta-producto" id="producto-3">
+          <img src="elements/xbox.jpeg" alt="Xbox Serie X" class="imagen-producto" />
+          <h3 class="nombre-producto">Xbox Serie X</h3>
+          <p class="precio-producto">$890.000</p>
+          <button class="boton-agregar" data-id="3">Agregar al carrito</button>
         </article>
 
-        <!-- Podés duplicar más artículos así -->
+        
       </div>
     </section>
+</section>
   </main>
 
-  <!-- Footer -->
   <footer id="pie-pagina" class="footer">
     <section class="footer-info" id="nosotros">
       <h3 class="footer-titulo">Sobre Nosotros</h3>
@@ -79,5 +77,6 @@
     </section>
     <p class="footer-copy">&copy; 2025 MiTienda. Todos los derechos reservados.</p>
   </footer>
+  <script src="./JS/script.js"></script>
 </body>
 </html>
